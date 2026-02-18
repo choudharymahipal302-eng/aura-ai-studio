@@ -38,8 +38,9 @@ The focus is on:
 
 For business inquiries:
 
-WhatsApp: https://wa.me/YOURNUMBER  
-Email: youremail@example.com
+WhatsApp: https://wa.me/917990984323  
+Email: auraaaistudioo@gmail.com
+
 
 ---
 
