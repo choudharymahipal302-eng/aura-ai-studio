@@ -66,15 +66,15 @@ Send Email
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
 <img src="ad1.png" class="rounded-lg object-cover aspect-square w-full">
-<video autoplay loop muted playsinline 
-class="rounded-lg object-cover aspect-square w-full">
+<video controls muted loop playsinline 
+class="rounded-lg object-cover aspect-square w-full portfolio-video">
   <source src="ad2.mp4" type="video/mp4">
 </video>
 <img src="ad3.png"class="rounded-lg object-cover aspect-square w-full">
 <img src="ad4.png" class="rounded-lg object-cover aspect-square w-full">
-<video autoplay loop muted playsinline 
-class="rounded-lg object-cover aspect-square w-full">
-  <source src="ad5.mp4" type="video/mp4">
+<video controls muted loop playsinline 
+class="rounded-lg object-cover aspect-square w-full portfolio-video">
+  <source src="ad2.mp4" type="video/mp4">
 </video>
 <img src="ad6.png" class="rounded-lg object-cover aspect-square w-full">
 
@@ -200,5 +200,22 @@ Send Email
 
 </footer>
 
+<script>
+const videos = document.querySelectorAll(".portfolio-video");
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.play().catch(()=>{});
+    } else {
+      entry.target.pause();
+    }
+  });
+},{threshold:0.5});
+
+videos.forEach(video=>{
+  observer.observe(video);
+});
+</script>
 </body>
 </html>
